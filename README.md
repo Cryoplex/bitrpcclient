@@ -28,7 +28,16 @@ The only dependency is the [requests library](docs.python-requests.org).
 
 Tested with python 2.7 and python 3.5.
 
+## Install
+To install just download the project and run `python setup.py install`
+```
+git clone https://github.com/fmontoto/bitrpcclient.git
+cd bitrpcclient
+python setup.py install
+```
 
+## Contribute
+If you want to contribute to the code, want a new feature or ask for help, do not hesitate to open an issue or send a pull request.
 
 ## License
 bitrpcclient is distributed under Apache License 2.0. See LICENSE file.
