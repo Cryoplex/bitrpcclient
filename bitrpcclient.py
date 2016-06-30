@@ -48,11 +48,11 @@ class _Callable(object):
             return response
         if response.status_code == 200:
             result = response.json()['result']
-            if result:
-                return result
-            else:
+            if result is None:
                 err = response.json()['error']
                 raise BitRPCErrorResponse(err['code'], err['message'])
+            else:
+                return result
 
         elif response.status_code == 404:
             raise BitRPCException(
