@@ -17,7 +17,14 @@ To run the above sample, run the bitcoind daemon:
 bitcoind -server -rpcuser=<username> -rpcpassword=<password> -testnet
 ```
 ## Errors
-A `BitRPCException` is raised if something wrong. On properly handled errors from the JSON-RPC server a `BitRPCErrorResponse` with the code and the message of the error. Otherwise a BitRPCException will be raised with a message.
+A `BitRPCException` is raised if something wrong. On properly handled errors from the JSON-RPC server a `BitRPCErrorResponse` will be raise with the code and the message of the error. Otherwise a BitRPCException will be raised with a message.
+
+## Requirements
+The only dependency is the [requests library](docs.python-requests.org).
+
+Tested with python 2.7 and python 3.5.
+
+
 
 ## License
 bitrpcclient is distributed under Apache License 2.0. See LICENSE file.
