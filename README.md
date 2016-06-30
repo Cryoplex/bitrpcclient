@@ -16,6 +16,10 @@ To run the above sample, run the bitcoind daemon:
 ```
 bitcoind -server -rpcuser=<username> -rpcpassword=<password> -testnet
 ```
+
+## Methods
+All BitRPCClient calls are dynamic, you can get a list with `cl.help()`. Documentation about the server could be found at [bitcoin.org](https://bitcoin.org/en/developer-reference#remote-procedure-calls-rpcs) and also at the bitcoin [wiki](https://en.bitcoin.it/wiki/Original_Bitcoin_client/API_calls_list)
+
 ## Errors
 A `BitRPCException` is raised if something wrong. On properly handled errors from the JSON-RPC server a `BitRPCErrorResponse` will be raise with the code and the message of the error. Otherwise a BitRPCException will be raised with a message.
 
