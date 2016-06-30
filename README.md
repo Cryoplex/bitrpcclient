@@ -33,6 +33,7 @@ To install just download the project and run `python setup.py install`
 ```
 git clone https://github.com/fmontoto/bitrpcclient.git
 cd bitrpcclient
+pip install -r requirements.txt
 python setup.py install
 ```
 
