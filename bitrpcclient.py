@@ -95,7 +95,7 @@ class BitRPCClient(object):
         call_id = "bitrpcclient"
         if args:
             payload = {'method': method,
-                       'params': [args],
+                       'params': list(args),
                        'id': call_id}
         else:
             payload = {'method': method,
