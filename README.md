@@ -1,8 +1,19 @@
 # bitrpcclient
 BitRPCClient is a JSON-RPC client for bitcoind.
 
-## Sample code
+## Usage
+
+### Scripting
+```python
+
+    import bitrpcclient
+    cl = bitrpcclient.BitRPCClient('<username>', '<password>', port=18332)
+    print(cl.help())
 ```
+
+### Command Line Interface
+```
+$ python
 >>> import bitrpcclient
 >>> cl = bitrpcclient.BitRPCClient('<username>', '<password>', port=18332)
 >>> cl.getinfo()
