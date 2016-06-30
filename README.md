@@ -24,7 +24,7 @@ All BitRPCClient calls are dynamic, you can get a list with `cl.help()`. Documen
 A `BitRPCException` is raised if something wrong. On properly handled errors from the JSON-RPC server a `BitRPCErrorResponse` will be raise with the code and the message of the error. Otherwise a BitRPCException will be raised with a message.
 
 ## Requirements
-The only dependency is the [requests library](docs.python-requests.org).
+The only dependency is the [requests library](http://docs.python-requests.org).
 
 Tested with python 2.7 and python 3.5.
 
