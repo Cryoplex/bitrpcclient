@@ -1,5 +1,5 @@
 # bitrpcclient
-BitRPCClient is a JSON-RPC client for bitcoind.
+Bitcoin RPC Client is a JSON-RPC simple client for bitcoind.
 
 ## Usage
 
