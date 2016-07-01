@@ -53,13 +53,20 @@ class _Callable(object):
                 raise BitRPCErrorResponse(err['code'], err['message'])
             else:
                 return result
-
+        elif response.status_code == 400:
+            raise BitRPCException("Bad request")
+        elif response.status_code == 401:
+            raise BitRPCException("Unauthorized")
+        elif response.status_code == 403:
+            raise BitRPCException("Forbidden")
         elif response.status_code == 404:
-            raise BitRPCException(
-                "Method not found")
+            raise BitRPCException("Not found")
+        elif response.status_code == 405:
+            raise BitRPCException("Bad method")
         elif response.status_code == 500:
-            error = response.json()['error']
-            raise BitRPCErrorResponse(error['code'], error['message'])
+            raise BitRPCException("Internal Server Error")
+        elif response.status_code == 503:
+            raise BitRPCException("Service unavailable")
         else:
             raise BitRPCException(
                     "Unexpected HTTP status_code: %d" % response.status_code)
